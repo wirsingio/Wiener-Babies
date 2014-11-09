@@ -1,0 +1,38 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  {{> current_baby }}
+
+  <h1>Unsere neuesten Wienzlinge</h1>
+  <ul>
+    <li>
+      <img src="svg/boy-lying.svg" alt="Baby-Junge" class="small-baby" />
+      <time datetime="2014-11-08T22:34TZD">vor 38 Minuten</time> ist Karl in der Donaustadt auf die Welt gekommen.
+    </li>
+    <li>
+      <img src="svg/boy-lying.svg" alt="Baby-Junge" class="small-baby" />
+      <time datetime="2014-11-08T22:12TZD">vor 48 Minuten</time> ist Peter auf der Wieden auf die Welt gekommen.
+    </li>
+    <li>
+      <img src="svg/girl-lying.svg" alt="Baby-Mädchen" class="small-baby" />
+      <time datetime="2014-11-08T21:43TZD">vor mehr als 1 Stunde</time> ist Sara in Floridsdorf auf die Welt gekommen.
+    </li>
+  </ul>
+</body>
+
+<template name="current_baby">
+  <img id="large_baby" src="svg/girl-lying.svg" alt="Baby-Mädchen" />
+  <h1>Willkommen, Sophie!</h1>
+  <p>Sophie hat am 8. November um 23:12 in Leopoldstadt das Licht der Welt erblickt.</p>
+</template>
