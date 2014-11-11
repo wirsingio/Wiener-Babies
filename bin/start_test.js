@@ -1,6 +1,7 @@
 var spawn = require('child_process').spawn;
-
-var args = ['test-packages', '--once', '--driver-package', 'test-in-console', '-p', 10015];
+var fs = require('fs');
+var packages = fs.readdirSync('./packages/').join(' ')
+var args = ['test-packages', '--once', '--driver-package', 'test-in-console', '-p', 10015, packages];
 
 var meteor = spawn((process.env.TEST_COMMAND || 'meteor'), args);
 meteor.stdout.pipe(process.stdout);
