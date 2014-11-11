@@ -11,3 +11,17 @@ Package.onUse(function(api) {
     'data.coffee'
   ], 'server');
 });
+
+Package.onTest(function(api) {
+
+  api.use([
+    'coffeescript',
+    'spacejamio:munit@2.1.1',
+    'dataimport'
+  ]);
+
+  api.addFiles([
+    'tests/data.integration.coffee'
+  ], 'server')
+
+});
